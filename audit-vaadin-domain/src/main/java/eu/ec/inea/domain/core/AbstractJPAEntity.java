@@ -12,6 +12,7 @@ public class AbstractJPAEntity implements Identifiable<Long>  {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "AUDIT_SEQ")
     @Column(name="PKID", nullable = false )
+    @SequenceGenerator(name="AUDIT_SEQ", sequenceName="AUDIT_SEQ", allocationSize=100)
     protected Long id;
 
     @Override
