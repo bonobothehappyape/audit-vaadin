@@ -21,12 +21,9 @@ public class BaseProviderTest extends TestCase {
     @Override
     protected void setUp() throws Exception {
         final Properties p = new Properties();
-        p.setProperty("auditDS", "new://Resource?type=DataSource");
-        p.setProperty("auditDS.JdbcDriver", "org.h2.Driver");
-        p.setProperty("auditDS.JdbcUrl", "jdbc:h2:mem:auditdb;LOCK_TIMEOUT=20000;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=TRUE");
-
-        p.setProperty("audit-db-pu.hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-
+        p.put("auditDS", "new://Resource?type=DataSource");
+        p.put("auditDS.JdbcDriver", "org.hsqldb.jdbcDriver");
+        p.put("auditDS.JdbcUrl", "jdbc:hsqldb:mem:test");
 
 
         ctx = EJBContainer.createEJBContainer(p).getContext();

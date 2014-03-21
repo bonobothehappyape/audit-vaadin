@@ -19,7 +19,8 @@ public class UserEntityProviderTest extends BaseProviderTest{
 
 
     public void test() throws Exception {
-        UserEntityProvider provider = (UserEntityProvider) getCtx().lookup("java:global/audit-vaadin-ejb/UserEntityProvider");
+        UserEntityProvider provider = (UserEntityProvider)
+                getCtx().lookup("java:global/audit-vaadin-ejb/UserEntityProvider");
         Assert.assertNotNull(provider);
 
 

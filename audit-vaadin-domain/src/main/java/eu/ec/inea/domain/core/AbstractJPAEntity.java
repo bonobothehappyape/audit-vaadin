@@ -6,13 +6,12 @@ import javax.persistence.*;
  * Created by asvesdi on 06/03/14.
  */
 @MappedSuperclass
-@SequenceGenerator(name="AUDIT_SEQ", sequenceName="AUDIT_SEQ", allocationSize=100)
 public class AbstractJPAEntity implements Identifiable<Long>  {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "AUDIT_SEQ")
-    @Column(name="PKID", nullable = false )
-    @SequenceGenerator(name="AUDIT_SEQ", sequenceName="AUDIT_SEQ", allocationSize=100)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="audit_seq")
+    @SequenceGenerator(name="audit_seq", sequenceName="audit_seq", allocationSize=100)
+    @Column(name = "pkid", nullable = false)
     protected Long id;
 
     @Override
