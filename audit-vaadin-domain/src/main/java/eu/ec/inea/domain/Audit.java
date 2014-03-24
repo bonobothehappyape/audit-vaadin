@@ -13,7 +13,6 @@ import java.util.Date;
 @Table(name="AUDIT")
 @AttributeOverride(name = "id",
 		column = @Column(name = "AUDIT_PKID", insertable = false, updatable = false))
-
 public class Audit extends AbstractJPAEntityVersion {
 
 	/**

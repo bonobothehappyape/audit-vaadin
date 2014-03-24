@@ -11,6 +11,7 @@
     <modules>
         <module>audit-vaadin-domain</module>
         <module>audit-vaadin-ejb</module>
+        <module>audit-vaadin-web</module>
     </modules>
 
     <dependencies>

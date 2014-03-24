@@ -1,5 +1,7 @@
 package eu.ec.inea.ejb.providers.impl;
 
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewProvider;
 import eu.ec.inea.domain.User;
 import eu.ec.inea.ejb.providers.EjbEntityProvider;
 
@@ -15,4 +17,5 @@ public class UserEntityProvider extends EjbEntityProvider<User>{
     public UserEntityProvider() {
         super(User.class);
     }
+
 }
